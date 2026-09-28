@@ -110,12 +110,12 @@ function GrowthAndManagement() {
 
               {/* Top Floating Card: Total Revenue */}
               <div className="absolute top-6 left-2 z-0 text-white rounded-2xl p-4 w-44">
-                <img src={growthAndManagementTotalRevenue} alt="" />
+                <img src={growthAndManagementTotalRevenue} alt="Total Revenue" />
               </div>
 
               {/* Middle Floating Card: Year to Date */}
               <div className="absolute top-32 left-6 z-0 text-white rounded-2xl p-4 w-28">
-                <img src={growthAndManagementTotalRevenueTwo} alt="" />
+                <img src={growthAndManagementTotalRevenueTwo} alt="Year to Date" />
               </div>
 
               {/* Floating Lime 3D Squiggle Accent */}
@@ -123,7 +123,7 @@ function GrowthAndManagement() {
 
               {/* Bottom Floating Card: Happy Students */}
               <div className="absolute bottom-36 -right-9 z-20  text-gray-900 rounded-2xl p-3.5 w-72">
-                <img src={growthAndManagementHappyStudents} alt="" />
+                <img src={growthAndManagementHappyStudents} alt="Happy Students" />
               </div>
             </div>
           </div>
