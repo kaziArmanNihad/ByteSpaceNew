@@ -100,7 +100,7 @@ const courseData = [
     studentsCount: "26+",
   },
   {
-    id: 3,
+    id: 6,
     title: "the Power of Big Data",
     author: "purepearl studio",
     rating: 4.5,

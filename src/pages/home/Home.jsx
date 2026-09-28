@@ -4,6 +4,7 @@ import Feature from "./Feature.jsx";
 import LearningPaths from "./LearningPaths.jsx";
 import GrowthAndManagement from "./GrowthAndManagement.jsx";
 import Banner from "./Banner.jsx";
+import Testimonials from "./Testimonials.jsx";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <LearningPaths />
       <GrowthAndManagement />
       <Banner />
+      <Testimonials />
     </>
   );
 }

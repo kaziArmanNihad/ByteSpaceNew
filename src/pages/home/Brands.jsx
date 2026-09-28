@@ -1,39 +1,33 @@
-import React from "react";
-import BrandIconOne from "../../assets/BrandOne.png";
-import BrandIconThree from "../../assets/BrandThree.png";
-import BrandIconFour from "../../assets/BrandFour.png";
-import BrandIconFive from "../../assets/BrandFive.png";
+import BrandIconOne from "../../assets/HomePageImages/BrandSectionImages/BrandOne.png";
+import BrandIconThree from "../../assets/HomePageImages/BrandSectionImages/BrandThree.png";
+import BrandIconFour from "../../assets/HomePageImages/BrandSectionImages/BrandFour.png";
+import BrandIconFive from "../../assets/HomePageImages/BrandSectionImages/BrandFive.png";
 
 function Brands() {
   const logos = [
     {
       id: 1,
       name: "Logoipsum",
-      // Wavy circle icon
       icon: BrandIconOne,
     },
     {
       id: 2,
       name: "Logoipsum",
-      // Sunburst icon
       icon: BrandIconFour,
     },
     {
       id: 3,
       name: "Logoipsum",
-      // Lightning bolt circle icon
       icon: BrandIconThree,
     },
     {
       id: 4,
       name: "Logoipsum",
-      // 4-leaf clover / petals circle icon
       icon: BrandIconFour,
     },
     {
       id: 5,
       name: "Logoipsum",
-      // Concentric circles sphere icon
       icon: BrandIconFive,
     },
   ];

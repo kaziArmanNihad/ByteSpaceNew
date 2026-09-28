@@ -1,11 +1,11 @@
 import React from "react";
 import { CheckCircle2, Star } from "lucide-react";
-import growthAndManagementImageOne from "../../assets/growthAndManagementImageOne.png";
-import growthAndManagementImageTwo from "../../assets/growthAndManagementImageTwo.png";
-import growthAndManagementCourseImageOne from "../../assets/growthAndManagementCourseImageOne.png";
-import growthAndManagementTotalRevenue from "../../assets/growthAndManagementTotalRevenue.png";
-import growthAndManagementTotalRevenueTwo from "../../assets/growthAndManagementTotalRevenueTwo.png";
-import growthAndManagementHappyStudents from "../../assets/growthAndManagementHappyStudents.png";
+import growthAndManagementImageOne from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementImageOne.png";
+import growthAndManagementImageTwo from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementImageTwo.png";
+import growthAndManagementCourseImageOne from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementCourseImageOne.png";
+import growthAndManagementTotalRevenueTwo from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementTotalRevenueTwo.png";
+import growthAndManagementTotalRevenue from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementTotalRevenue.png";
+import growthAndManagementHappyStudents from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementHappyStudents.png";
 
 function GrowthAndManagement() {
   return (

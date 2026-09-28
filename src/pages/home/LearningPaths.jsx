@@ -1,9 +1,9 @@
-import iconOne from "../../assets/LearningPathOne.png";
-import iconTwo from "../../assets/LearningPathTwo.png";
-import iconThree from "../../assets/LearningPathThree.png";
-import iconFour from "../../assets/LearningPathFour.png";
-import iconFive from "../../assets/LearningPathFive.png";
-import iconSix from "../../assets/LearningPathSix.png";
+import iconOne from "../../assets/HomePageImages/LearningSectionImages/LearningPathOne.png";
+import iconTwo from "../../assets/HomePageImages/LearningSectionImages/LearningPathTwo.png";
+import iconThree from "../../assets/HomePageImages/LearningSectionImages/LearningPathThree.png";
+import iconFour from "../../assets/HomePageImages/LearningSectionImages/LearningPathFour.png";
+import iconFive from "../../assets/HomePageImages/LearningSectionImages/LearningPathFive.png";
+import iconSix from "../../assets/HomePageImages/LearningSectionImages/LearningPathSix.png";
 
 const categories = [
   {
