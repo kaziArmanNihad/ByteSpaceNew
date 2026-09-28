@@ -1,6 +1,7 @@
 import { ShoppingBag } from "lucide-react";
 import { Link } from "react-router";
 import GridBG from "./GridBG";
+import logo from "../../assets/logo.png";
 
 function Navbar() {
   return (
@@ -12,9 +13,7 @@ function Navbar() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between text-white">
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer">
-          <div className="bg-[#8B31FF] text-[#CBFF00] font-black text-2xl w-10 h-10 rounded-xl flex items-center justify-center border-2 border-[#CBFF00] shadow-md">
-            b
-          </div>
+          <img src={logo} alt="ByteSpace Logo" />
           <span className="text-2xl font-extrabold tracking-tight text-white px-2 py-0.5 rounded-lg bg-[#8B31FF]/20">
             ByteSpace
           </span>

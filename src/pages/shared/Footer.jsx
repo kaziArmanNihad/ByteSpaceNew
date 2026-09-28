@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import footerLogo from "../../assets/logo.png";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -43,20 +44,7 @@ export default function Footer() {
             <div>
               {/* Logo */}
               <div className="flex items-center gap-2 mb-6">
-                <svg
-                  width="36"
-                  height="36"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 8L28 16V24L12 32V8Z" fill="#C6FF00" />
-                  <path
-                    d="M8 12L24 20V28L8 36V12Z"
-                    fill="#C6FF00"
-                    fillOpacity="0.8"
-                  />
-                </svg>
+                <img src={footerLogo} alt="ByteSpace Logo" />
                 <span className="text-2xl font-black tracking-tight text-black">
                   ByteSpace
                 </span>
