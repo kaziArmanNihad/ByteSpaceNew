@@ -1,248 +1,134 @@
-import toast from "react-hot-toast";
-import { BsTwitterX } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
-import { FaSquareGithub } from "react-icons/fa6";
+import React, { useState } from "react";
 
 export default function Footer() {
-  const handleClick = () => {
-    toast.success("Coming soon!");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle newsletter subscription
+    console.log("Subscribed:", email);
   };
 
-  const footerLinks = {
-    QuickAccess: [
-      { name: "Features", href: "/#features" },
-      { name: "Services", href: "/#services" },
-      { name: "Pricing", href: "/#pricing" },
-      { name: "Testimonials", href: "/#testimonials" },
+  const linkColumns = [
+    [
+      { name: "Featured Courses", href: "#" },
+      { name: "Featured Categories", href: "#" },
+      { name: "Business", href: "#" },
+      { name: "IT", href: "#" },
+      { name: "Design", href: "#" },
     ],
-    Pages: [
-      { name: "Home", href: "/home" },
-      { name: "About", href: "/about" },
-      { name: "Services", href: "/services" },
-      { name: "Contact", href: "/contact" },
+    [
+      { name: "Development", href: "#" },
+      { name: "Marketing", href: "#" },
+      { name: "Photography", href: "#" },
+      { name: "Finance", href: "#" },
+      { name: "Sport", href: "#" },
     ],
-    Resources: [
-      { name: "Documentation", href: "/documentation" },
-      { name: "Help Center", href: "/help-center" },
-      { name: "Community", href: "/community" },
-      { name: "Status", href: "/status" },
+    [
+      { name: "Become a Creator", href: "#" },
+      { name: "Affiliate Program", href: "#" },
+      { name: "Contact", href: "#" },
+      { name: "Help", href: "#" },
+      { name: "About", href: "#" },
     ],
-  };
+  ];
 
   return (
-    <footer className="relative overflow-hidden bg-slate-950 text-white">
-      {/* Background glow */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -bottom-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[120px]" />
+    <footer className="w-full bg-white font-sans text-[#2D2D2D] py-16 px-6 md:px-16 lg:px-24">
+      <div className="mx-auto max-w-7xl">
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
+          {/* Left Column: Brand & Newsletter */}
+          <div className="lg:col-span-6 flex flex-col justify-between pr-0 lg:pr-12">
+            <div>
+              {/* Logo */}
+              <div className="flex items-center gap-2 mb-6">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 8L28 16V24L12 32V8Z" fill="#C6FF00" />
+                  <path
+                    d="M8 12L24 20V28L8 36V12Z"
+                    fill="#C6FF00"
+                    fillOpacity="0.8"
+                  />
+                </svg>
+                <span className="text-2xl font-black tracking-tight text-black">
+                  ByteSpace
+                </span>
+              </div>
 
-        <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-purple-600/10 blur-[120px]" />
-      </div>
+              {/* Description */}
+              <p className="text-sm font-medium text-gray-700 mb-8 max-w-md leading-relaxed">
+                Stay Up to date with our latest features and releases by joining
+                our newsletter.
+              </p>
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
-        {/* Main footer */}
-        <div className="grid gap-12 border-t border-white/10 py-16 md:grid-cols-2 lg:grid-cols-5">
-          {/* Brand */}
-          <div className="lg:col-span-2">
-            <a
-              href="#"
-              className="inline-block text-2xl font-bold tracking-tight"
-            >
-              My<span className="text-cyan-300">Logo</span>
-            </a>
-
-            <p className="mt-5 max-w-sm text-sm leading-6 text-white/40">
-              We create beautiful digital experiences for ambitious brands and
-              forward-thinking teams.
-            </p>
-
-            {/* Social icons */}
-            <div className="mt-6 flex gap-3">
-              <a
-                href="https://x.com"
-                aria-label="Twitter"
-                target="_blank"
-                title="Twitter"
-                className="
-                  flex h-10 w-10 items-center justify-center
-                  rounded-xl
-                  border border-white/10
-                  bg-white/5
-                  text-sm text-white/50
-                  backdrop-blur-xl
-                  transition
-                  hover:border-white/20
-                  hover:bg-white/10
-                  hover:text-white
-                "
+              {/* Newsletter Form */}
+              <form
+                onSubmit={handleSubmit}
+                className="flex items-center gap-3 mb-6"
               >
-                <BsTwitterX />
-              </a>
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full max-w-xs rounded-full border border-gray-300 px-6 py-3.5 text-sm text-gray-800 placeholder-gray-400 outline-none transition focus:border-black"
+                />
+                <button
+                  type="submit"
+                  className="rounded-full bg-[#D2FF00] px-8 py-3.5 text-sm font-semibold text-black transition hover:bg-[#bce600] active:scale-95 shrink-0"
+                >
+                  Search
+                </button>
+              </form>
 
-              <a
-                href="https://github.com"
-                aria-label="GitHub"
-                target="_blank"
-                title="GitHub"
-                className="
-                  flex h-10 w-10 items-center justify-center
-                  rounded-xl
-                  border border-white/10
-                  bg-white/5
-                  text-sm text-white/50
-                  backdrop-blur-xl
-                  transition
-                  hover:border-white/20
-                  hover:bg-white/10
-                  hover:text-white
-                "
-              >
-                <FaSquareGithub />
-              </a>
-
-              <a
-                href="https://www.linkedin.com"
-                aria-label="LinkedIn"
-                title="LinkedIn"
-                target="_blank"
-                className="
-                  flex h-10 w-10 items-center justify-center
-                  rounded-xl
-                  border border-white/10
-                  bg-white/5
-                  text-sm text-white/50
-                  backdrop-blur-xl
-                  transition
-                  hover:border-white/20
-                  hover:bg-white/10
-                  hover:text-white
-                "
-              >
-                <FaLinkedin />
-              </a>
+              {/* Terms Note */}
+              <p className="text-[11px] leading-relaxed text-gray-500 max-w-md">
+                By subscribing, you agree to our Privacy Policy and consent to
+                receive updates from our company.
+              </p>
             </div>
           </div>
 
-          {/* Links */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h3 className="text-sm font-semibold text-white">{title}</h3>
-
-              <ul className="mt-5 space-y-3">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="
-                        text-sm text-white/40
-                        transition-colors
-                        hover:text-white
-                      "
-                    >
-                      {link.name}
-                    </a>
-                  </li>
+          {/* Right Column: Links Grid */}
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-8 pt-2">
+            {linkColumns.map((col, idx) => (
+              <div key={idx} className="flex flex-col space-y-4">
+                {col.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-sm font-normal text-gray-700 transition hover:text-black"
+                  >
+                    {link.name}
+                  </a>
                 ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Newsletter */}
-        <div
-          className="
-            mb-12
-            flex flex-col gap-6
-            rounded-2xl
-            border border-white/10
-            bg-white/5
-            p-6
-            backdrop-blur-xl
-            md:flex-row
-            md:items-center
-            md:justify-between
-          "
-        >
-          <div>
-            <h3 className="font-semibold">Stay in the loop</h3>
-
-            <p className="mt-1 text-sm text-white/40">
-              Get occasional updates, tips, and inspiration.
-            </p>
+              </div>
+            ))}
           </div>
-
-          <form className="flex w-full max-w-md gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="
-                min-w-0 flex-1
-                rounded-xl
-                border border-white/10
-                bg-white/5
-                px-4 py-3
-                text-sm text-white
-                outline-none
-                placeholder:text-white/30
-                focus:border-cyan-400/50
-                focus:bg-white/10
-              "
-            />
-
-            <button
-              type="submit"
-              className="
-                rounded-xl
-                cursor-pointer
-                hover:bg-white
-                px-5 py-3
-                text-sm font-semibold
-                text-slate-950
-                transition
-                bg-cyan-100
-              "
-            >
-              Subscribe
-            </button>
-          </form>
         </div>
 
-        {/* Bottom */}
-        <div
-          className="
-            flex flex-col gap-4
-            border-t border-white/10
-            py-8
-            text-sm
-            md:flex-row
-            md:items-center
-            md:justify-between
-          "
-        >
-          <p className="text-white/30">
-            © {new Date().getFullYear()} MyLogo. All rights reserved.
-          </p>
+        {/* Bottom Border Line & Copyright */}
+        <div className="mt-20 border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+          <p>@ 2026 ByteSpace. All rights reserved.</p>
 
-          <div className="flex gap-6">
-            <p
-              className="text-white/30 transition cursor-pointer"
-              onClick={handleClick}
-            >
-              Privacy
-            </p>
-
-            <p
-              className="text-white/30 transition cursor-pointer"
-              onClick={handleClick}
-            >
-              Terms
-            </p>
-
-            <p
-              className="text-white/30 transition cursor-pointer"
-              onClick={handleClick}
-            >
-              Cookies
-            </p>
+          <div className="flex items-center space-x-6">
+            <a href="#" className="hover:text-black transition">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-black transition">
+              Terms of Service
+            </a>
+            <a href="#" className="hover:text-black transition">
+              Cookies Settings
+            </a>
           </div>
         </div>
       </div>
