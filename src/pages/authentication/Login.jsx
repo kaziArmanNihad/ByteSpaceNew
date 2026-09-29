@@ -1,169 +1,194 @@
-import { Link, useNavigate } from "react-router";
-import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
-import { FaEnvelope, FaLock, FaArrowRight } from "react-icons/fa";
+import { useState } from "react";
+import { Link } from "react-router";
+import { FaFacebookF } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import GridBG from "../shared/GridBG";
+import logo from "../../assets/logo.png";
+import registerElementOne from "../../assets/HomePageImages/RegisterSectionImage/registerElementOne.png";
+import registerElementTwo from "../../assets/HomePageImages/RegisterSectionImage/registerElementTwo.png";
+import registerElementThree from "../../assets/HomePageImages/RegisterSectionImage/registerElementThree.png";
+import registerCardOne from "../../assets/HomePageImages/RegisterSectionImage/registerCardOne.png";
+import registerCardTwo from "../../assets/HomePageImages/RegisterSectionImage/registerCardTwo.png";
+import registerHappyStudents from "../../assets/HomePageImages/RegisterSectionImage/registerHappyStudents.png";
 
-export default function Login() {
-  const navigate = useNavigate();
+function Login() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm();
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  const onSubmit = async (data) => {
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1200));
-
-      console.log("Login data:", data);
-
-      toast.success("Login successful! 🚀");
-
-      navigate("/");
-    } catch (error) {
-      toast.error("Login failed. Please try again.");
-      console.log(error);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Login Data:", formData);
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-slate-950 px-6 py-12 text-white">
-      {/* Background */}
-      <div className="absolute left-1/4 top-0 h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[140px]" />
+    <div className="relative min-h-screen bg-[#1052FE] text-white flex items-center justify-center font-sans overflow-hidden py-12 px-4 sm:px-6 lg:px-8 select-none">
+      {/* Background Grid Pattern */}
+      <GridBG gridSize={60} opacity={0.15} />
 
-      <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-purple-600/10 blur-[140px]" />
+      {/* Main Container */}
+      <div className="relative z-20 max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* LEFT SECTION: Branding & Visual Stack */}
+        <div className="lg:col-span-6 flex flex-col justify-center space-y-8">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2 w-fit">
+            <img src={logo} alt="ByteSpace Logo" />
+          </Link>
 
-      {/* Grid */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
-          backgroundSize: "50px 50px",
-        }}
-      />
-
-      <div className="relative w-full max-w-md">
-        {/* Card */}
-        <div className="rounded-3xl mt-12 border border-white/10 bg-white/[0.04] p-7 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-9">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold">Welcome back</h1>
-
-            <p className="mt-3 text-sm text-white/40">
-              Sign in to continue to your account.
+          {/* Heading & Subtitle */}
+          <div>
+            <h1 className="text-3xl sm:text-xl font-extrabold tracking-tight text-white">
+              Sign in with ease
+            </h1>
+            <p className="mt-3 text-sm text-white/80 leading-relaxed max-w-md">
+              Experience a seamless and efficient sign-in process that grants
+              you instant access to a world of knowledge.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-5">
-            {/* Email */}
-            <div>
-              <label className="mb-2 block text-sm font-medium text-white/60">
-                Email
-              </label>
+          {/* Visual Showcase Stack with 3D Shapes & Floating Cards */}
+          <div className="relative w-full max-w-md h-[340px] pt-4">
+            <div className="absolute top-0 left-10 z-20 w-28 h-20 pointer-events-none filter drop-shadow-xl transform">
+              <img src={registerElementOne} alt="Lime Ring" />
+            </div>
 
-              <div className="relative">
-                <FaEnvelope className="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-white/20" />
+            <div className="absolute bottom-0 left-4 z-20 w-32 h-32 pointer-events-none">
+              <img src={registerElementTwo} alt="Lime Pyramid" />
+            </div>
 
+            <div className="absolute -bottom-10 right-20 z-30 w-24 h-36 pointer-events-none">
+              <img src={registerElementThree} alt="White Coil" />
+            </div>
+
+            {/* Background Layer Card */}
+            <div className="absolute top-5 left-0 w-72 rounded-3xl p-3">
+              <img
+                src={registerCardTwo}
+                alt="Course preview"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Foreground Main Course Card */}
+            <div className="absolute top-0 left-20 z-10 w-72 p-3.5">
+              <img
+                src={registerCardOne}
+                alt="Course preview"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Floating Card: Happy Students */}
+            <div className="absolute -bottom-6 right-20 z-20 w-40">
+              <img src={registerHappyStudents} alt="Happy Students" />
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT SECTION: Login Card */}
+        <div className="lg:col-span-6 flex justify-center lg:justify-end">
+          <div className="bg-white text-gray-900 rounded-[32px] p-8 sm:p-12 shadow-2xl w-full max-w-md">
+            {/* Header */}
+            <div className="mb-8">
+              <p className="text-xs font-semibold text-[#1052FE] mb-1">
+                Sign In
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                Welcome Back
+              </h2>
+            </div>
+
+            {/* Login Form */}
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Email */}
+              <div>
+                <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+                  Email
+                </label>
                 <input
                   type="email"
-                  placeholder="you@example.com"
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value: /^\S+@\S+\.\S+$/,
-                      message: "Please enter a valid email",
-                    },
-                  })}
-                  className="w-full rounded-xl border border-white/10 bg-white/5 py-3.5 pl-11 pr-4 text-sm text-white outline-none placeholder:text-white/20 transition focus:border-cyan-300/40 focus:bg-white/[0.07]"
+                  name="email"
+                  required
+                  placeholder="designer@example.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full bg-gray-50/50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#1052FE] focus:bg-white"
                 />
               </div>
 
-              {errors.email && (
-                <p className="mt-2 text-xs text-red-400">
-                  {errors.email.message}
-                </p>
-              )}
-            </div>
-
-            {/* Password */}
-            <div>
-              <div className="mb-2 flex items-center justify-between">
-                <label className="text-sm font-medium text-white/60">
+              {/* Password */}
+              <div>
+                <label className="block text-xs font-semibold text-gray-700 mb-1.5">
                   Password
                 </label>
-
-                <Link
-                  to="/forgot-password"
-                  className="text-xs text-cyan-300 transition hover:text-white"
-                >
-                  Forgot password?
-                </Link>
-              </div>
-
-              <div className="relative">
-                <FaLock className="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-white/20" />
-
                 <input
                   type="password"
-                  placeholder="••••••••"
-                  {...register("password", {
-                    required: "Password is required",
-                    minLength: {
-                      value: 6,
-                      message: "Password must be at least 6 characters",
-                    },
-                  })}
-                  className="w-full rounded-xl border border-white/10 bg-white/5 py-3.5 pl-11 pr-4 text-sm text-white outline-none placeholder:text-white/20 transition focus:border-cyan-300/40 focus:bg-white/[0.07]"
+                  name="password"
+                  required
+                  placeholder="********"
+                  value={formData.password}
+                  onChange={handleChange}
+                  className="w-full bg-gray-50/50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#1052FE] focus:bg-white"
                 />
               </div>
 
-              {errors.password && (
-                <p className="mt-2 text-xs text-red-400">
-                  {errors.password.message}
-                </p>
-              )}
+              {/* Submit Button */}
+              <div className="flex justify-end pt-2">
+                <button
+                  type="submit"
+                  className="bg-[#CBFF00] hover:bg-[#b8e600] text-gray-900 font-bold px-8 py-3.5 rounded-full text-sm transition-all transform active:scale-95 shadow-md cursor-pointer"
+                >
+                  Sign In
+                </button>
+              </div>
+            </form>
+
+            {/* Divider */}
+            <div className="relative my-8 flex items-center justify-center">
+              <div className="w-full border-t border-gray-200"></div>
+              <span className="absolute bg-white px-3 text-xs text-gray-400 font-medium">
+                or
+              </span>
             </div>
 
-            {/* Remember */}
-            <label className="flex cursor-pointer items-center gap-3 text-sm text-white/40">
-              <input
-                type="checkbox"
-                {...register("remember")}
-                className="h-4 w-4 rounded border-white/10 bg-white/5 accent-cyan-400"
-              />
-              Remember me
-            </label>
+            {/* Social Login Buttons */}
+            <div className="flex items-center justify-center gap-4">
+              <button
+                type="button"
+                className="w-12 h-12 rounded-2xl border border-gray-200 flex items-center justify-center text-gray-800 hover:bg-gray-50 transition cursor-pointer"
+                aria-label="Sign in with Facebook"
+              >
+                <FaFacebookF className="w-5 h-5 text-gray-900" />
+              </button>
+              <button
+                type="button"
+                className="w-12 h-12 rounded-2xl border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition cursor-pointer"
+                aria-label="Sign in with Google"
+              >
+                <FcGoogle className="w-6 h-6" />
+              </button>
+            </div>
 
-            {/* Submit */}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-400 px-6 py-3.5 text-sm font-bold text-slate-950 transition-all duration-300 hover:bg-cyan-300 hover:shadow-xl hover:shadow-cyan-500/20 disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {isSubmitting ? (
-                "Signing in..."
-              ) : (
-                <>
-                  Sign In
-                  <FaArrowRight className="text-xs" />
-                </>
-              )}
-            </button>
-          </form>
-
-          {/* Register */}
-          <p className="mt-7 text-center text-sm text-white/40">
-            Don't have an account?{" "}
-            <Link
-              to="/register"
-              className="font-medium text-cyan-300 transition hover:text-white"
-            >
-              Create account
-            </Link>
-          </p>
+            {/* Register Redirect Footer */}
+            <p className="text-center text-xs text-gray-500 mt-10 font-normal">
+              New user?{" "}
+              <Link
+                to="/register"
+                className="text-[#1052FE] font-semibold hover:underline"
+              >
+                Create an account
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
+export default Login;
