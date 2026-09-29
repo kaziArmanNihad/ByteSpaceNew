@@ -1,19 +1,21 @@
-import React from "react";
-import { CheckCircle2, Star } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import growthAndManagementImageOne from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementImageOne.png";
 import growthAndManagementImageTwo from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementImageTwo.png";
 import growthAndManagementCourseImageOne from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementCourseImageOne.png";
 import growthAndManagementTotalRevenueTwo from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementTotalRevenueTwo.png";
 import growthAndManagementTotalRevenue from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementTotalRevenue.png";
 import growthAndManagementHappyStudents from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementHappyStudents.png";
+import growthAndManagementElementOne from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementElementOne.png";
+import growthAndManagementProgressImage from "../../assets/HomePageImages/GrowthAndManagementSectionImages/growthAndManagementProgressImage.png";
 
 function GrowthAndManagement() {
   return (
     <section className="relative w-full bg-[#F8FAFC] py-20 px-4 sm:px-6 lg:px-8 font-sans overflow-hidden">
       {/* Background Soft Glow Gradients */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-0 left-60 w-96 h-96 bg-lime-200/40 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 -left-20 w-96 h-96 bg-lime-200/40 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-60 w-96 h-96 bg-lime-400/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 -left-20 w-96 h-96 bg-lime-400/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400/40 rounded-full blur-3xl border border-black" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto space-y-28">
@@ -74,21 +76,23 @@ function GrowthAndManagement() {
                 />
               </div>
 
-              <div className="absolute top-0 left-0 z-0 bg-white/95 backdrop-blur-md text-gray-900 rounded-2xl p-4 w-60">
-                <img src={growthAndManagementCourseImageOne} alt="" />
+              <div className="absolute top-0 left-0 z-0 w-60">
+                <img
+                  src={growthAndManagementCourseImageOne}
+                  alt="Course Image"
+                />
               </div>
 
               {/* Floating Card: Learning Progress */}
-              <div className="absolute top-28 right-0 z-20 bg-white/95 backdrop-blur-md text-gray-900 rounded-2xl p-4 shadow-xl border border-gray-100 w-44">
-                <p className="text-[11px] font-medium text-gray-500 mb-1">
-                  Learning Progress
-                </p>
-                <p className="text-2xl font-extrabold text-gray-900 mb-2">
-                  55%
-                </p>
-                <div className="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
-                  <div className="bg-[#CBFF00] h-full w-[55%] rounded-full" />
-                </div>
+              <div className="absolute top-30 right-20 z-20 w-32">
+                <img
+                  src={growthAndManagementProgressImage}
+                  alt="Learning Progress"
+                />
+              </div>
+
+              <div className="absolute top-10 right-10 z-20 w-30 -rotate-40">
+                <img src={growthAndManagementElementOne} alt="Element One" />
               </div>
             </div>
           </div>
@@ -110,12 +114,18 @@ function GrowthAndManagement() {
 
               {/* Top Floating Card: Total Revenue */}
               <div className="absolute top-6 left-2 z-0 text-white rounded-2xl p-4 w-44">
-                <img src={growthAndManagementTotalRevenue} alt="Total Revenue" />
+                <img
+                  src={growthAndManagementTotalRevenue}
+                  alt="Total Revenue"
+                />
               </div>
 
               {/* Middle Floating Card: Year to Date */}
               <div className="absolute top-32 left-6 z-0 text-white rounded-2xl p-4 w-28">
-                <img src={growthAndManagementTotalRevenueTwo} alt="Year to Date" />
+                <img
+                  src={growthAndManagementTotalRevenueTwo}
+                  alt="Year to Date"
+                />
               </div>
 
               {/* Floating Lime 3D Squiggle Accent */}
@@ -123,7 +133,14 @@ function GrowthAndManagement() {
 
               {/* Bottom Floating Card: Happy Students */}
               <div className="absolute bottom-36 -right-9 z-20  text-gray-900 rounded-2xl p-3.5 w-72">
-                <img src={growthAndManagementHappyStudents} alt="Happy Students" />
+                <img
+                  src={growthAndManagementHappyStudents}
+                  alt="Happy Students"
+                />
+              </div>
+
+              <div className="absolute top-10 right-10 z-20 w-40">
+                <img src={growthAndManagementElementOne} alt="Element One" />
               </div>
             </div>
           </div>
