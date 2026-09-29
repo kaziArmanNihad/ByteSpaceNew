@@ -2,6 +2,7 @@ import { ShoppingBag } from "lucide-react";
 import { Link } from "react-router";
 import GridBG from "./GridBG";
 import logo from "../../assets/logo.png";
+import toast from "react-hot-toast";
 
 function Navbar() {
   return (
@@ -21,14 +22,14 @@ function Navbar() {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center space-x-10 text-sm font-semibold text-white/90">
-          <Link to="#home" className="hover:text-white/50 transition-colors">
+          <Link to="/" className="hover:text-white/50 transition-colors">
             Home
           </Link>
-          <Link to="#courses" className="hover:text-white/50 transition-colors">
+          <Link to="/courses" className="hover:text-white/50 transition-colors">
             Courses
           </Link>
           <Link
-            to="#creators"
+            to="/creators"
             className="hover:text-white/50 transition-colors"
           >
             Creators
@@ -38,16 +39,20 @@ function Navbar() {
         {/* Action Buttons */}
         <div className="flex items-center space-x-6 text-sm font-semibold">
           <Link
-            to="#signin"
+            to="/login"
             className="hover:text-white/50 transition-colors hidden sm:block"
           >
             Sign In
           </Link>
-          <Link to="#join" className="hover:text-white/50 transition-colors">
+          <Link
+            to="/register"
+            className="hover:text-white/50 transition-colors"
+          >
             Join Us
           </Link>
           <Link
-            to="#cart"
+            to="/"
+            onClick={() => toast.error("Not Available!")}
             className="p-2 hover:bg-white/10 rounded-full transition-colors relative"
             aria-label="Shopping Bag"
           >

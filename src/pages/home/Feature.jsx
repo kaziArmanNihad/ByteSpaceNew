@@ -1,120 +1,6 @@
 import React, { useState } from "react";
 import { Star, Signal, BookOpen, Clock, MessageSquare } from "lucide-react";
-
-const categories = [
-  "Featured",
-  "Music",
-  "Drawing & Painting",
-  "Marketing",
-  "Animation",
-  "Social Media",
-  "UI/UX Design",
-  "Creative Marketing",
-  "Digital Illustration",
-  "Film & Video",
-  "Crafts",
-  "Freelance & Entrepreneurship",
-  "Graphic Design",
-  "Photography",
-  "Productivity",
-  "Web Development",
-  "Data Science",
-  "Cooking",
-  "+ More",
-];
-
-const courseData = [
-  {
-    id: 1,
-    title: "Learn Figma from Basic",
-    author: "purepearl studio",
-    rating: 4.5,
-    lessons: "17 Lessons",
-    duration: "2 hours 16 mins",
-    comments: "59 Comments",
-    level: "Beginner",
-    price: "$25",
-    priceType: "/lifetime",
-    image:
-      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80",
-    studentsCount: "26+",
-  },
-  {
-    id: 2,
-    title: "Build Digital Asset",
-    author: "purepearl studio",
-    rating: 4.5,
-    lessons: "17 Lessons",
-    duration: "2 hours 16 mins",
-    comments: "59 Comments",
-    level: "Beginner",
-    price: "$25",
-    priceType: "/lifetime",
-    image:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-    studentsCount: "26+",
-  },
-  {
-    id: 3,
-    title: "the Power of Big Data",
-    author: "purepearl studio",
-    rating: 4.5,
-    lessons: "17 Lessons",
-    duration: "2 hours 16 mins",
-    comments: "59 Comments",
-    level: "Beginner",
-    price: "$25",
-    priceType: "/lifetime",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    studentsCount: "26+",
-  },
-  {
-    id: 4,
-    title: "Learn Python Programming",
-    author: "purepearl studio",
-    rating: 4.5,
-    lessons: "17 Lessons",
-    duration: "2 hours 16 mins",
-    comments: "59 Comments",
-    level: "Beginner",
-    price: "$27",
-    priceType: "/lifetime",
-    image:
-      "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=800&q=80",
-    studentsCount: "26+",
-  },
-  {
-    id: 5,
-    title: "Build Digital Asset",
-    author: "purepearl studio",
-    rating: 4.5,
-    lessons: "17 Lessons",
-    duration: "2 hours 16 mins",
-    comments: "59 Comments",
-    level: "Beginner",
-    price: "$15",
-    priceType: "/lifetime",
-    image:
-      "https://images.unsplash.com/photo-1619410283995-43d9134e7656?auto=format&fit=crop&w=800&q=80",
-    studentsCount: "26+",
-  },
-  {
-    id: 6,
-    title: "the Power of Big Data",
-    author: "purepearl studio",
-    rating: 4.5,
-    lessons: "17 Lessons",
-    duration: "2 hours 16 mins",
-    comments: "59 Comments",
-    level: "Beginner",
-    price: "$23",
-    priceType: "/lifetime",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    studentsCount: "26+",
-  },
-];
+import { FeatureCourseData, FeatureCategories } from "../../utils/Datas";
 
 function Feature() {
   const [activeCategory, setActiveCategory] = useState("Featured");
@@ -135,7 +21,7 @@ function Feature() {
 
         {/* Category Pills Filter */}
         <div className="mt-8 flex flex-wrap justify-center gap-2.5 max-w-4xl mx-auto">
-          {categories.map((cat) => {
+          {FeatureCategories.map((cat) => {
             const isActive = activeCategory === cat;
             return (
               <button
@@ -155,7 +41,7 @@ function Feature() {
 
         {/* Course Cards Grid */}
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-          {courseData.map((course) => (
+          {FeatureCourseData.map((course) => (
             <div
               key={course.id}
               className="bg-white rounded-3xl border border-gray-100 p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"

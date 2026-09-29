@@ -12,9 +12,15 @@ import HeroSectionImage from "../../assets/HomePageImages/HeroSectionImages/Hero
 import HeroSectionDesignCard from "../../assets/HomePageImages/HeroSectionImages/HeroSectionDesignCard.png";
 import HeroSectionHappyStudentCard from "../../assets/HomePageImages/HeroSectionImages/HeroSectionHappyStudentCard.png";
 import HeroSectionProgressCard from "../../assets/HomePageImages/HeroSectionImages/HeroSectionProgressCard.png";
+import toast from "react-hot-toast";
 
 function Hero() {
   const [searchQuery, setSearchQuery] = useState("");
+
+  const handleToast = () => {
+    toast.error("Search functionality is not functional yet.");
+    setSearchQuery("");
+  };
 
   return (
     <div className="min-h-screen bg-[#1052FE] text-white relative overflow-hidden font-sans select-none">
@@ -103,6 +109,7 @@ function Hero() {
 
             {/* Button alongside */}
             <button
+              onClick={handleToast}
               type="submit"
               className="bg-[#D4FB20] hover:bg-[#b8e600] text-gray-900 cursor-pointer font-bold px-8 py-2 rounded-full text-sm md:text-base transition-all transform active:scale-95 shrink-0 shadow-sm"
             >

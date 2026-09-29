@@ -7,6 +7,7 @@ import BannerElementFour from "../../assets/HomePageImages/BannerSectionImages/B
 import BannerElementFive from "../../assets/HomePageImages/BannerSectionImages/BannerElementFive.png";
 import BannerElementSix from "../../assets/HomePageImages/BannerSectionImages/BannerElementSix.png";
 import BannerElementSeven from "../../assets/HomePageImages/BannerSectionImages/BannerElementSeven.png";
+import { Link } from "react-router";
 
 function Banner() {
   return (
@@ -66,12 +67,14 @@ function Banner() {
         </p>
 
         {/* CTA Button */}
-        <button
-          type="button"
-          className="mt-8 bg-[#CBFF00] hover:bg-[#b8e600] text-gray-900 px-8 py-3.5 rounded-full text-sm sm:text-base transition-all transform active:scale-95 shadow-lg cursor-pointer"
-        >
-          Join as Creator
-        </button>
+        <Link to="/register" className="hover:text-white/50 transition-colors">
+          <button
+            type="button"
+            className="mt-8 bg-[#CBFF00] hover:bg-[#b8e600] text-gray-900 px-8 py-3.5 rounded-full text-sm sm:text-base transition-all transform active:scale-95 shadow-lg cursor-pointer"
+          >
+            Join as Creator
+          </button>
+        </Link>
       </div>
     </section>
   );

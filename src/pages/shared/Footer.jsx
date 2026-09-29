@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import footerLogo from "../../assets/logo.png";
 import { Link } from "react-router";
+import toast from "react-hot-toast";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    toast.success("Subscribed successfully!");
+    setEmail(""); // Clear the input field after submission
     // Handle newsletter subscription
     console.log("Subscribed:", email);
   };

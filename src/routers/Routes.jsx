@@ -3,6 +3,7 @@ import Root from "../layout/Root";
 
 // Pages
 import Home from "../pages/home/Home";
+import Courses from "../pages/courses/Courses";
 
 // Auth
 import Login from "../pages/authentication/Login";
@@ -16,10 +17,10 @@ export const router = createBrowserRouter([
     children: [
       // Pages
       { index: true, Component: Home },
-      // {
-      //   path: "/about",
-      //   Component: About,
-      // },
+      {
+        path: "/courses",
+        Component: Courses,
+      },
 
       // Auth
       {
