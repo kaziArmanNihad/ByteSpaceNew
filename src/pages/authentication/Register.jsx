@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import auth from "../../Firebase/Firebase.Config";
+import auth from "../../firebase/firebase.config";
 import GridBG from "../shared/GridBG";
 import logo from "../../assets/logo.png";
 import registerElementOne from "../../assets/HomePageImages/RegisterSectionImage/registerElementOne.png";

@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import auth from "../../Firebase/Firebase.Config";
+import auth from "../../firebase/firebase.config";
 import GridBG from "../shared/GridBG";
 import logo from "../../assets/logo.png";
 import registerElementOne from "../../assets/HomePageImages/RegisterSectionImage/registerElementOne.png";
