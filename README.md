@@ -7,13 +7,13 @@
 
 ## 📋 Interview Task Details
 
-| Detail | Value |
-| :--- | :--- |
-| **Company** | ByteSpace |
-| **Position** | Jr. Software Engineer (Frontend) |
-| **Task Name** | Build the "ByteSpace New" Website |
-| **Tracking ID** | `1abaf4cb-d9b9-42f5-972b-eaa1a27986f7` |
-| **Deadline** | October 01, 2026 |
+| Detail           | Value                                                                                                                                              |
+| :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Company**      | ByteSpace                                                                                                                                          |
+| **Position**     | Jr. Software Engineer (Frontend)                                                                                                                   |
+| **Task Name**    | Build the "ByteSpace New" Website                                                                                                                  |
+| **Tracking ID**  | `1abaf4cb-d9b9-42f5-972b-eaa1a27986f7`                                                                                                             |
+| **Deadline**     | October 01, 2026                                                                                                                                   |
 | **Figma Design** | [ByteSpace New Figma Design](https://www.figma.com/design/26TBgRjmpuxudcErJsHUfy/ByteSpace-New-Check-website?node-id=0-1&p=f&t=eQOrqJmq6rMG5b6L-0) |
 
 ---
@@ -21,6 +21,7 @@
 ## 💡 Overview & Requirements
 
 ### Functional Requirements
+
 - **Landing Page (Core):** Pixel-perfect implementation of the full ByteSpace landing page based on the Figma design specifications.
 - **Hero & Search Component:** Responsive hero section with unified input search bar and dynamic background grid overlays.
 - **Course Explorer & Filtering:** Dynamic category filter pills, skill level selection, and responsive card grid display.
@@ -31,6 +32,7 @@
 - **404 Not Found Page (Bonus):** Customized brand-themed error page.
 
 ### Non-Functional Requirements
+
 - **Responsive Design:** Fully responsive layout across mobile, tablet, and desktop viewports.
 - **Component Architecture:** Modular, reusable, and cleanly organized React component hierarchy.
 - **Code Quality:** Clean code practices, standardized formatting, and clear file naming conventions.
@@ -42,12 +44,15 @@
 ## 🧩 Problem Understanding
 
 ### Problem Statement
+
 The goal is to translate complex Figma visual designs into a high-performance, pixel-perfect React web application. The application needs to preserve brand identity through vibrant color palettes (`#1052FE` primary blue, `#CBFF00` accent lime), custom gradient typography, soft blur effects, and 3D visual decorations while maintaining strong code reusability and mobile responsiveness.
 
 ### Expected Result
+
 A fully functional, deployed web application that mirrors the design precision of the Figma prototypes, delivering smooth micro-interactions, responsive search/filter components, and clean UI state management.
 
 ### Assumptions
+
 - The application currently operates with dynamic mock JSON data for course items, categories, and creator profiles to demonstrate interactive features like pagination and search filtering.
 - Modern browsers with standard CSS Backdrop Filter / Flexbox / Grid support are targeted.
 
@@ -84,41 +89,41 @@ Browser Client (React SPA)
 
 ## 🛠️ Tech Stack & Dependencies
 
-* **Framework:** [React](https://react.dev/) (Vite)
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-* **Icons:** [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
-* **Routing:** `react-router`
-* **Hosting & Deployment:** [Vercel](https://vercel.com/)
+- **Framework:** [React](https://react.dev/) (Vite)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
+- **Routing:** `react-router`
+- **Hosting & Deployment:** [Vercel](https://vercel.com/)
 
 ---
 
 ## 🚀 Local Setup & Installation
 
 1. **Clone the repository:**
+
 ```bash
 git clone https://github.com/kaziArmanNihad/ByteSpaceNew.git
 cd ByteSpaceNew
 
 ```
 
-
 2. **Install dependencies:**
+
 ```bash
 npm install
 
 ```
 
-
 3. **Run the development server:**
+
 ```bash
 npm run dev
 
 ```
 
-
 4. **Build for production:**
+
 ```bash
 npm run build
 
 ```
-

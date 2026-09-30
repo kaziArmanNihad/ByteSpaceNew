@@ -5,6 +5,7 @@ import Root from "../layout/Root";
 import Home from "../pages/home/Home";
 import Courses from "../pages/courses/Courses";
 import CreatorProfile from "../pages/creatorProfile/CreatorProfile";
+import CourseDetails from "../pages/courseDetails/CourseDetails";
 
 // Auth
 import Login from "../pages/authentication/Login";
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/creatorProfile",
         Component: CreatorProfile,
+      },
+      {
+        path: "/courseDetails",
+        Component: CourseDetails,
       },
 
       // Auth

@@ -168,7 +168,7 @@ function GrowthAndManagement() {
                   key={index}
                   className="flex items-center gap-3 text-sm sm:text-base font-semibold text-gray-800"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-[#1052FE] shrink-0 fill-blue-50" />
+                  <CheckCircle2 className="w-5 h-5 text-white fill-[#1052FE] shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
 import {
   ShoppingBag,
@@ -143,89 +143,88 @@ function CreatorProfile() {
         {/* Course Cards Grid */}
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {CreatorCourses.map((course) => (
-            <div
-              key={course.id}
-              className="bg-white rounded-3xl border border-gray-100 p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
-            >
-              {/* Image Container with Floating Overlays */}
-              <div className="relative w-full h-52 rounded-2xl overflow-hidden group">
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+            <Link key={course.id} to="/courseDetails">
+              <div className="bg-white rounded-3xl border border-gray-100 p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                {/* Image Container with Floating Overlays */}
+                <div className="relative w-full h-52 rounded-2xl overflow-hidden group">
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
 
-                {/* Bottom Overlay Info Pill Bar */}
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-gray-700 font-medium gap-1">
-                  <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-3 py-1.5">
-                    {course.lessons}
-                  </span>
-                  <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-3 py-1.5">
-                    {course.duration}
-                  </span>
-                  <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-3 py-1.5">
-                    {course.comments}
-                  </span>
-                </div>
-              </div>
-
-              {/* Course Title & Rating */}
-              <div className="mt-4 px-1">
-                <div className="flex items-start justify-between gap-2">
-                  <h3 className="text-base font-bold text-gray-900 leading-snug">
-                    {course.title}
-                  </h3>
-                  <div className="flex items-center gap-1 text-xs font-semibold text-gray-500 shrink-0 mt-0.5">
-                    <span>{course.rating}</span>
-                    <Star className="w-3.5 h-3.5 fill-gray-300 text-gray-300" />
+                  {/* Bottom Overlay Info Pill Bar */}
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-gray-700 font-medium gap-1">
+                    <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-3 py-1.5">
+                      {course.lessons}
+                    </span>
+                    <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-3 py-1.5">
+                      {course.duration}
+                    </span>
+                    <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-3 py-1.5">
+                      {course.comments}
+                    </span>
                   </div>
                 </div>
 
-                <p className="text-xs text-gray-400 mt-0.5">
-                  by {course.author}
-                </p>
-              </div>
+                {/* Course Title & Rating */}
+                <div className="mt-4 px-1">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="text-base font-bold text-gray-900 leading-snug">
+                      {course.title}
+                    </h3>
+                    <div className="flex items-center gap-1 text-xs font-semibold text-gray-500 shrink-0 mt-0.5">
+                      <span>{course.rating}</span>
+                      <Star className="w-3.5 h-3.5 fill-gray-300 text-gray-300" />
+                    </div>
+                  </div>
 
-              {/* Level & Student Avatars */}
-              <div className="mt-4 flex items-center justify-between px-1">
-                <div className="flex items-center gap-1.5 bg-gray-100/80 px-2.5 py-1 rounded-md text-xs text-gray-600 font-medium">
-                  <Signal className="w-3 h-3 text-gray-500" />
-                  <span>{course.level}</span>
+                  <p className="text-xs text-gray-400 mt-0.5">
+                    by {course.author}
+                  </p>
                 </div>
 
-                {/* Avatar Stack */}
-                <div className="flex items-center -space-x-2">
-                  <img
-                    className="w-6 h-6 rounded-full border-2 border-white object-cover"
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
-                    alt="Student"
-                  />
-                  <img
-                    className="w-6 h-6 rounded-full border-2 border-white object-cover"
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
-                    alt="Student"
-                  />
-                  <img
-                    className="w-6 h-6 rounded-full border-2 border-white object-cover"
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80"
-                    alt="Student"
-                  />
-                  <div className="w-6 h-6 rounded-full border-2 border-white bg-[#D2FF00] text-gray-900 font-bold text-[10px] flex items-center justify-center">
-                    {course.studentsCount}
+                {/* Level & Student Avatars */}
+                <div className="mt-4 flex items-center justify-between px-1">
+                  <div className="flex items-center gap-1.5 bg-gray-100/80 px-2.5 py-1 rounded-md text-xs text-gray-600 font-medium">
+                    <Signal className="w-3 h-3 text-gray-500" />
+                    <span>{course.level}</span>
+                  </div>
+
+                  {/* Avatar Stack */}
+                  <div className="flex items-center -space-x-2">
+                    <img
+                      className="w-6 h-6 rounded-full border-2 border-white object-cover"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+                      alt="Student"
+                    />
+                    <img
+                      className="w-6 h-6 rounded-full border-2 border-white object-cover"
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
+                      alt="Student"
+                    />
+                    <img
+                      className="w-6 h-6 rounded-full border-2 border-white object-cover"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80"
+                      alt="Student"
+                    />
+                    <div className="w-6 h-6 rounded-full border-2 border-white bg-[#D2FF00] text-gray-900 font-bold text-[10px] flex items-center justify-center">
+                      {course.studentsCount}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Price Row */}
-              <div className="mt-4 pt-3 border-t border-gray-100 flex items-baseline px-1">
-                <span className="text-lg font-black text-[#1052FE]">
-                  {course.price}
-                </span>
-                <span className="text-xs text-gray-400 font-normal ml-0.5">
-                  {course.priceType}
-                </span>
+                {/* Price Row */}
+                <div className="mt-4 pt-3 border-t border-gray-100 flex items-baseline px-1">
+                  <span className="text-lg font-black text-[#1052FE]">
+                    {course.price}
+                  </span>
+                  <span className="text-xs text-gray-400 font-normal ml-0.5">
+                    {course.priceType}
+                  </span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </main>
