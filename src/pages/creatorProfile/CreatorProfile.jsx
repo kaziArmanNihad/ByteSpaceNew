@@ -21,7 +21,7 @@ function CreatorProfile() {
   const [isFollowing, setIsFollowing] = useState(false);
 
   const handleToast = () => {
-    toast.error("Not Available!");
+    toast.success("This Feature is not Available!");
   };
   return (
     <div className="w-full bg-white font-sans text-gray-900 pb-20 select-none">
@@ -31,7 +31,7 @@ function CreatorProfile() {
         <GridBG gridSize={60} opacity={0.15} />
 
         {/* Creator Info Container */}
-        <div className="relative z-20 max-w-5xl mx-auto px-6 pt-8">
+        <div className="relative z-20 max-w-6xl mx-auto px-6 pt-8">
           {/* Creator Header Row */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
             {/* Avatar */}
@@ -98,7 +98,7 @@ function CreatorProfile() {
       </section>
 
       {/* PRODUCTS GRID SECTION */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         {/* Filter Controls Row */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-6">
           {/* Left Action Buttons */}
@@ -156,17 +156,14 @@ function CreatorProfile() {
                 />
 
                 {/* Bottom Overlay Info Pill Bar */}
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-gray-700 font-medium">
-                  <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-2 py-1.5">
-                    <BookOpen className="w-3 h-3 text-gray-500" />
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-gray-700 font-medium gap-1">
+                  <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-3 py-1.5">
                     {course.lessons}
                   </span>
-                  <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-2 py-1.5">
-                    <Clock className="w-3 h-3 text-gray-500" />
+                  <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-3 py-1.5">
                     {course.duration}
                   </span>
-                  <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-2 py-1.5">
-                    <MessageSquare className="w-3 h-3 text-gray-500" />
+                  <span className="flex items-center gap-1 bg-white/80 backdrop-blur-md rounded-full px-3 py-1.5">
                     {course.comments}
                   </span>
                 </div>

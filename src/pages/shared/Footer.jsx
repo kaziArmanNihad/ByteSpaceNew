@@ -13,6 +13,10 @@ export default function Footer() {
     console.log("Subscribed:", email);
   };
 
+  const handleToast = () => {
+    toast.success("This Feature is Coming Soon!");
+  };
+
   const linkColumns = [
     [
       { name: "Featured Courses", href: "#" },
@@ -39,7 +43,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-white font-sans text-[#2D2D2D] py-16 px-6 md:px-16 lg:px-24 border-t border-gray-300">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         {/* Logo */}
         <div className="flex items-center gap-2 mb-2">
           <img src={footerLogo} alt="ByteSpace Logo" />
@@ -95,6 +99,7 @@ export default function Footer() {
                   <Link
                     key={link.name}
                     to={link.href}
+                    onClick={handleToast}
                     className="text-sm font-normal text-gray-700 transition hover:text-black"
                   >
                     {link.name}
@@ -110,13 +115,25 @@ export default function Footer() {
           <p>@ 2026 ByteSpace. All rights reserved.</p>
 
           <div className="flex items-center space-x-6">
-            <Link to="/" className="hover:text-black transition">
+            <Link
+              onClick={handleToast}
+              to="/"
+              className="hover:text-black transition"
+            >
               Privacy Policy
             </Link>
-            <Link to="/" className="hover:text-black transition">
+            <Link
+              onClick={handleToast}
+              to="/"
+              className="hover:text-black transition"
+            >
               Terms of Service
             </Link>
-            <Link to="/" className="hover:text-black transition">
+            <Link
+              onClick={handleToast}
+              to="/"
+              className="hover:text-black transition"
+            >
               Cookies Settings
             </Link>
           </div>

@@ -77,7 +77,7 @@ function Hero() {
       </div>
 
       {/* Main Content */}
-      <main className="relative z-20 max-w-5xl mx-auto px-4 pt-6 md:pt-10 text-center flex flex-col items-center">
+      <main className="relative z-20 max-w-6xl mx-auto px-4 pt-6 md:pt-10 text-center flex flex-col items-center">
         {/* Main Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-4xl font-bold tracking-tight leading-[1.1] text-white max-w-lg">
           Get Access to Hundreds Courses Available

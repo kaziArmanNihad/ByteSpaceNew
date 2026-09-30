@@ -7,7 +7,7 @@ function Feature() {
 
   return (
     <section className="w-full bg-white py-16 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         {/* Section Header */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
           Discover Your Passion, <br className="hidden sm:inline" />

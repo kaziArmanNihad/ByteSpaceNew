@@ -11,7 +11,7 @@ function Navbar() {
       <GridBG gridSizeX={60} gridSizeY={90} opacity={0.15} />
 
       {/* Centered Navbar Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between text-white">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-6 flex items-center justify-between text-white">
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer">
           <img src={logo} alt="ByteSpace Logo" />
