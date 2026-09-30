@@ -44,7 +44,7 @@ function Testimonials() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Title */}
           <div className="lg:col-span-6">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
               Discover What Our <br className="hidden sm:inline" />
               Community Is Saying
             </h2>

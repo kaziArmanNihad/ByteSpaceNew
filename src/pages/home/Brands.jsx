@@ -43,9 +43,9 @@ function Brands() {
             <img
               src={logo.icon}
               alt={logo.name}
-              className="w-8 h-8 object-contain"
+              className="w-8 h-8 sm:w-4 sm:h-4 object-contain"
             />
-            <span className="text-xl font-bold tracking-tight text-[#4B5563]">
+            <span className="text-xs md:text-base font-bold tracking-tight text-[#4B5563]">
               {logo.name}
             </span>
           </div>

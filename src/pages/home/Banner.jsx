@@ -16,12 +16,12 @@ function Banner() {
       <GridBG gridSizeX={60} gridSizeY={60} opacity={0.15} />
 
       {/* 1. Top-Left Lime Squiggle */}
-      <div className="absolute top-4 -left-6 md:-top-4 md:left-0 z-10 w-28 h-44 md:w-44 md:h-72 pointer-events-none transform -rotate-12 filter drop-shadow-xl">
+      <div className="absolute hidden md:block sm:top-4 sm:-left-6 md:-top-4 md:left-0 z-10 w-28 h-44 md:w-44 md:h-72 pointer-events-none transform -rotate-12 filter drop-shadow-xl">
         <img src={BannerElementOne} alt="Banner Element One" />
       </div>
 
       {/* 2. Upper-Left White Coil Spring */}
-      <div className="absolute top-6 left-28 md:top-10 md:left-28 z-10 w-20 h-28 md:w-28 md:h-52 pointer-events-none">
+      <div className="absolute hidden sm:top-6 sm:left-28 md:top-10 md:left-28 z-10 w-20 h-28 md:w-28 md:h-52 pointer-events-none">
         <img src={BannerElementTwo} alt="Banner Element Two" />
       </div>
 
@@ -31,22 +31,22 @@ function Banner() {
       </div>
 
       {/* 4. Bottom-Left Lime 3D Donut / Torus */}
-      <div className="absolute -bottom-16 left-12 md:top-78 md:left-32 z-10 w-36 h-36 md:w-72 md:h-72 pointer-events-none filter drop-shadow-2xl">
+      <div className="absolute -bottom-16 left-12 md:top-80 md:left-32 z-10 w-36 h-36 md:w-72 md:h-72 pointer-events-none filter drop-shadow-2xl">
         <img src={BannerElementFour} alt="Banner Element Four" />
       </div>
 
       {/* 5. Top-Right Yellow 3D Pyramid */}
-      <div className="absolute top-2 right-24 md:top-6 md:right-48 z-10 w-24 h-28 md:w-36 md:h-44 pointer-events-non">
+      <div className="absolute top-2 right-24 md:top-6 md:right-48 z-10 w-24 h-28 md:w-20 md:h-30 pointer-events-non">
         <img src={BannerElementFive} alt="Banner Element Five" />
       </div>
 
       {/* 6. Far Right White 3D Cylinder Pill */}
-      <div className="absolute top-12 -right-12 md:top-12 md:right-0 z-10 w-36 h-60 md:w-42 md:h-40 pointer-events-none">
+      <div className="absolute top-12 -right-12 md:top-12 md:right-0 z-10 w-36 h-60 md:w-30 md:h-30 pointer-events-none">
         <img src={BannerElementSix} alt="Banner Element Six" />
       </div>
 
       {/* 7. Bottom-Right Lime Squiggle */}
-      <div className="absolute -bottom-10 right-4 md:top-88 md:right-28 z-10 w-28 h-44 md:w-50 md:h-50 pointer-events-none">
+      <div className="absolute hidden md:block sm:-bottom-10 sm:right-4 md:top-88 md:right-28 z-10 w-28 h-44 md:w-50 md:h-50 pointer-events-none">
         <img src={BannerElementSeven} alt="Banner Element Seven" />
       </div>
 

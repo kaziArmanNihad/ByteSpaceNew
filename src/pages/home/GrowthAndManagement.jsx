@@ -84,14 +84,14 @@ function GrowthAndManagement() {
               </div>
 
               {/* Floating Card: Learning Progress */}
-              <div className="absolute top-30 right-20 z-20 w-32">
+              <div className="absolute top-30 right-0 sm:top-30 sm:right-20 z-20 w-32">
                 <img
                   src={growthAndManagementProgressImage}
                   alt="Learning Progress"
                 />
               </div>
 
-              <div className="absolute top-10 right-10 z-20 w-30 -rotate-40">
+              <div className="absolute top-20 -right-5 sm:top-10 sm:right-10 z-20 w-20 sm:w-30 -rotate-40">
                 <img src={growthAndManagementElementOne} alt="Element One" />
               </div>
             </div>
@@ -113,7 +113,7 @@ function GrowthAndManagement() {
               </div>
 
               {/* Top Floating Card: Total Revenue */}
-              <div className="absolute top-6 left-2 z-0 text-white rounded-2xl p-4 w-44">
+              <div className="absolute top-6 -left-5 sm:top-6 sm:left-2 z-0 text-white rounded-2xl p-4 w-44">
                 <img
                   src={growthAndManagementTotalRevenue}
                   alt="Total Revenue"
@@ -121,25 +121,22 @@ function GrowthAndManagement() {
               </div>
 
               {/* Middle Floating Card: Year to Date */}
-              <div className="absolute top-32 left-6 z-0 text-white rounded-2xl p-4 w-28">
+              <div className="absolute w-25 top-30 sm:top-32 sm:left-6 z-0 text-white rounded-2xl p-4 sm:w-28">
                 <img
                   src={growthAndManagementTotalRevenueTwo}
                   alt="Year to Date"
                 />
               </div>
 
-              {/* Floating Lime 3D Squiggle Accent */}
-              <div className="absolute top-20 -right-6 z-20 w-24 h-32 pointer-events-none filter drop-shadow-lg transform -rotate-12"></div>
-
               {/* Bottom Floating Card: Happy Students */}
-              <div className="absolute bottom-36 -right-9 z-20  text-gray-900 rounded-2xl p-3.5 w-72">
+              <div className="absolute bottom-0 w-40 right-0 sm:bottom-36 sm:-right-9 z-20  text-gray-900 rounded-2xl p-3.5 sm:w-72">
                 <img
                   src={growthAndManagementHappyStudents}
                   alt="Happy Students"
                 />
               </div>
 
-              <div className="absolute top-10 right-10 z-20 w-40">
+              <div className="absolute sm:top-10 sm:right-10 z-20 sm:w-40 bottom-10 right-0 w-20">
                 <img src={growthAndManagementElementOne} alt="Element One" />
               </div>
             </div>
