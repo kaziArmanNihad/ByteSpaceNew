@@ -3,6 +3,11 @@ import ReviewIconTwo from "../assets/HomePageImages/CourseDetailSectionImages/Re
 import ReviewIconThree from "../assets/HomePageImages/CourseDetailSectionImages/ReviewIconThree.png";
 import ReviewIconFour from "../assets/HomePageImages/CourseDetailSectionImages/ReviewIconFour.png";
 
+import TestimonialImageOne from "../assets/HomePageImages/TestimonialSectionImages/TestimonialImageOne.png";
+import TestimonialImageTwo from "../assets/HomePageImages/TestimonialSectionImages/TestimonialImageTwo.png";
+import TestimonialImageThree from "../assets/HomePageImages/TestimonialSectionImages/TestimonialImageThree.png";
+
+
 const FeatureCourseData = [
   {
     id: 1,
@@ -221,7 +226,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.8,
     lessons: "20 Lessons",
-    duration: "3 hours 10 mins",
+    duration: "3 hours 10m",
     comments: "84 Comments",
     level: "Intermediate",
     price: "$35",
@@ -237,7 +242,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.9,
     lessons: "25 Lessons",
-    duration: "5 hours 40 mins",
+    duration: "5 hours 40m",
     comments: "120 Comments",
     level: "Advanced",
     price: "$49",
@@ -253,7 +258,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.7,
     lessons: "15 Lessons",
-    duration: "4 hours 00 mins",
+    duration: "4 hours 00m",
     comments: "45 Comments",
     level: "Beginner",
     price: "$30",
@@ -269,7 +274,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.6,
     lessons: "12 Lessons",
-    duration: "1 hour 45 mins",
+    duration: "1 hour 45m",
     comments: "38 Comments",
     level: "Beginner",
     price: "$20",
@@ -285,7 +290,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.9,
     lessons: "18 Lessons",
-    duration: "3 hours 30 mins",
+    duration: "3 hours 30m",
     comments: "62 Comments",
     level: "Beginner",
     price: "$28",
@@ -301,7 +306,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.8,
     lessons: "22 Lessons",
-    duration: "4 hours 50 mins",
+    duration: "4 hours 50m",
     comments: "91 Comments",
     level: "Intermediate",
     price: "$40",
@@ -317,7 +322,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.9,
     lessons: "30 Lessons",
-    duration: "6 hours 15 mins",
+    duration: "6 hours 15m",
     comments: "142 Comments",
     level: "Intermediate",
     price: "$45",
@@ -333,7 +338,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.7,
     lessons: "16 Lessons",
-    duration: "2 hours 45 mins",
+    duration: "2 hours 45m",
     comments: "51 Comments",
     level: "Beginner",
     price: "$29",
@@ -349,7 +354,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.6,
     lessons: "14 Lessons",
-    duration: "2 hours 10 mins",
+    duration: "2 hours 10m",
     comments: "33 Comments",
     level: "Beginner",
     price: "$22",
@@ -365,7 +370,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.8,
     lessons: "24 Lessons",
-    duration: "5 hours 00 mins",
+    duration: "5 hours 00m",
     comments: "78 Comments",
     level: "Intermediate",
     price: "$42",
@@ -381,7 +386,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.8,
     lessons: "19 Lessons",
-    duration: "3 hours 20 mins",
+    duration: "3 hours 20m",
     comments: "67 Comments",
     level: "Beginner",
     price: "$32",
@@ -397,7 +402,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.9,
     lessons: "21 Lessons",
-    duration: "4 hours 15 mins",
+    duration: "4 hours 15m",
     comments: "95 Comments",
     level: "Intermediate",
     price: "$38",
@@ -413,7 +418,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.7,
     lessons: "18 Lessons",
-    duration: "3 hours 45 mins",
+    duration: "3 hours 45m",
     comments: "58 Comments",
     level: "Beginner",
     price: "$27",
@@ -429,7 +434,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.9,
     lessons: "15 Lessons",
-    duration: "2 hours 50 mins",
+    duration: "2 hours 50m",
     comments: "72 Comments",
     level: "Beginner",
     price: "$24",
@@ -445,7 +450,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.6,
     lessons: "13 Lessons",
-    duration: "1 hour 55 mins",
+    duration: "1 hour 55m",
     comments: "29 Comments",
     level: "Beginner",
     price: "$19",
@@ -461,7 +466,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.9,
     lessons: "28 Lessons",
-    duration: "6 hours 00 mins",
+    duration: "6 hours 00m",
     comments: "110 Comments",
     level: "Advanced",
     price: "$50",
@@ -477,7 +482,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.8,
     lessons: "11 Lessons",
-    duration: "1 hour 30 mins",
+    duration: "1 hour 30m",
     comments: "44 Comments",
     level: "Beginner",
     price: "$21",
@@ -493,7 +498,7 @@ const ALL_COURSES = [
     author: "purepearl studio",
     rating: 4.9,
     lessons: "16 Lessons",
-    duration: "3 hours 15 mins",
+    duration: "3 hours 15m",
     comments: "81 Comments",
     level: "Intermediate",
     price: "$32",
@@ -633,13 +638,40 @@ const ReviewData = [
   },
 ];
 
+const TestimonialsData = [
+  {
+    id: 1,
+    name: "Sarah M.",
+    role: "Enthusiastic Learner",
+    avatar: TestimonialImageOne,
+    quote:
+      '"ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."',
+  },
+  {
+    id: 2,
+    name: "James L.",
+    role: "Lifelong Learner",
+    avatar: TestimonialImageTwo,
+    quote:
+      '"I\'ve tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development."',
+  },
+  {
+    id: 3,
+    name: "Alex B.",
+    role: "Inspired Creator",
+    avatar: TestimonialImageThree,
+    quote:
+      '"As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It\'s fulfilling to see my courses making a positive impact on learners globally."',
+  },
+];
+
 const position = "top-right";
 const toastOptions = {
   duration: 3000,
   style: {
     background: "#1052FE",
     color: "#ffffff",
-    border: "1px solid rgba(203, 255, 0, 0.4)", // Subtle lime glow border
+    border: "1px solid rgba(203, 255, 0, 0.4)",
     borderRadius: "16px",
     padding: "12px 20px",
     fontSize: "14px",

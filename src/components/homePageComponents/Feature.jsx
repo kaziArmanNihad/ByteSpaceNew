@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Star, Signal, BookOpen, Clock, MessageSquare } from "lucide-react";
 import { FeatureCourseData, FeatureCategories } from "../../utils/Datas";
 import { Link } from "react-router";

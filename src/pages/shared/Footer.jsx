@@ -47,9 +47,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex items-center gap-2 mb-2">
           <img src={footerLogo} alt="ByteSpace Logo" />
-          <span className="text-2xl font-black tracking-tight text-black">
-            ByteSpace
-          </span>
+          <span className="text-2xl LogoFont text-black">ByteSpace</span>
         </div>
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">

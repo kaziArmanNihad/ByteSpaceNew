@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
-import GridBG from "../shared/GridBG";
+import GridBG from "../../pages/shared/GridBG";
 import HeroElementOne from "../../assets/HomePageImages/HeroSectionImages/HeroElementOne.png";
 import HeroElementTwo from "../../assets/HomePageImages/HeroSectionImages/HeroElementTwo.png";
 import HeroElementThree from "../../assets/HomePageImages/HeroSectionImages/HeroElementThree.png";

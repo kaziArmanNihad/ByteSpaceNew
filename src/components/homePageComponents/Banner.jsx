@@ -1,5 +1,4 @@
-import React from "react";
-import GridBG from "../shared/GridBG.jsx";
+import GridBG from "../../pages/shared/GridBG.jsx";
 import BannerElementOne from "../../assets/HomePageImages/BannerSectionImages/BannerElementOne.png";
 import BannerElementTwo from "../../assets/HomePageImages/BannerSectionImages/BannerElementTwo.png";
 import BannerElementThree from "../../assets/HomePageImages/BannerSectionImages/BannerElementThree.png";

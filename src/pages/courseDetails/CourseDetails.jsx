@@ -1,20 +1,22 @@
 import { useState } from "react";
-import { Link } from "react-router";
 import { Share2, Star, Users, Signal } from "lucide-react";
+import toast from "react-hot-toast";
 import GridBG from "../shared/GridBG";
 import courseDetailImage from "../../assets/HomePageImages/CourseDetailSectionImages/courseDetailImage.png";
 import courseDetailImageTwo from "../../assets/HomePageImages/CourseDetailSectionImages/courseDetailImageTwo.png";
-import toast from "react-hot-toast";
-import AboutTab from "./AboutTab";
-import LessonTab from "./LessonTab";
-import ReviewTab from "./ReviewTab";
 import iconOne from "../../assets/HomePageImages/CourseDetailSectionImages/iconOne.png";
 import iconTwo from "../../assets/HomePageImages/CourseDetailSectionImages/iconTwo.png";
 import iconThree from "../../assets/HomePageImages/CourseDetailSectionImages/iconThree.png";
 import iconFour from "../../assets/HomePageImages/CourseDetailSectionImages/iconFour.png";
 
+// importing components
+import AboutTab from "../../components/courseDetailPageComponents/AboutTab";
+import LessonTab from "../../components/courseDetailPageComponents/LessonTab";
+import ReviewTab from "../../components/courseDetailPageComponents/ReviewTab";
+
 function CourseDetails() {
   const [activeTab, setActiveTab] = useState("About");
+  
   return (
     <div className="w-full bg-white font-sans text-gray-900 pb-20 select-none">
       {/* HERO SECTION WITH NAVBAR */}

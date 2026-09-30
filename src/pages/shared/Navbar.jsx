@@ -31,7 +31,7 @@ function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 cursor-pointer">
           <img src={logo} alt="ByteSpace Logo" />
-          <span className="text-2xl font-extrabold tracking-tight text-white px-2 py-0.5 rounded-lg bg-[#8B31FF]/20">
+          <span className="text-2xl LogoFont text-white px-2 py-0.5 rounded-lg bg-[#8B31FF]/20">
             ByteSpace
           </span>
         </Link>
