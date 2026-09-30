@@ -1,5 +1,5 @@
 {
-  "name": "interview-repo-react",
+  "name": "ByteSpace-New",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
+    "firebase": "^12.19.0",
     "lucide-react": "^1.48.0",
     "prettier": "^3.9.6",
     "react": "^19.0.0",

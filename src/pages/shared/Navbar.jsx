@@ -1,10 +1,24 @@
+import { useContext } from "react";
 import { ShoppingBag } from "lucide-react";
 import { Link } from "react-router";
 import GridBG from "./GridBG";
 import logo from "../../assets/logo.png";
 import toast from "react-hot-toast";
+import { AuthContext } from "../../provider/AuthProvider";
 
 function Navbar() {
+  const { user, loading, logOut } = useContext(AuthContext);
+
+  const handleLogOut = async () => {
+    try {
+      await logOut();
+      toast.success("Logged out successfully");
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to log out. Please try again.");
+    }
+  };
+
   return (
     <header className="relative z-30 w-full bg-[#1052FE] overflow-hidden border-b border-white/10">
       {/* Full-width Grid Pattern Background */}
@@ -38,18 +52,32 @@ function Navbar() {
 
         {/* Action Buttons */}
         <div className="flex items-center space-x-6 text-sm font-semibold">
-          <Link
-            to="/login"
-            className="hover:text-white/50 transition-colors hidden sm:block"
-          >
-            Sign In
-          </Link>
-          <Link
-            to="/register"
-            className="hover:text-white/50 transition-colors"
-          >
-            Join Us
-          </Link>
+          {/* Wait for Firebase to restore the session so links don't flash */}
+          {!loading &&
+            (user ? (
+              <button
+                type="button"
+                onClick={handleLogOut}
+                className="hover:text-white/50 transition-colors cursor-pointer"
+              >
+                Logout
+              </button>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  className="hover:text-white/50 transition-colors hidden sm:block"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  to="/register"
+                  className="hover:text-white/50 transition-colors"
+                >
+                  Join Us
+                </Link>
+              </>
+            ))}
           <Link
             to="/"
             onClick={() => toast.error("Not Available!")}
