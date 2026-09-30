@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { ReviewData } from "../../utils/Datas";
 
 function ReviewTab() {
   return (
@@ -61,35 +62,7 @@ function ReviewTab() {
           Individual Reviews:
         </h4>
 
-        {[
-          {
-            name: "PurePearl Studio",
-            role: "UI/UX Designer",
-            time: "a year ago",
-            quote:
-              '"The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!"',
-            avatar:
-              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100",
-          },
-          {
-            name: "Albert Flores",
-            role: "UI/UX Designer",
-            time: "a year ago",
-            quote:
-              '"This course transformed my approach to digital design. The combination of theory, hands-on exercises, and real-world applications made it a truly enriching experience. Excited to implement what I\'ve learned!"',
-            avatar:
-              "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100",
-          },
-          {
-            name: "Cody Fisher",
-            role: "UI/UX Designer",
-            time: "a year ago",
-            quote:
-              '"The project showcase and critique module created a collaborative environment where I could showcase my work, receive valuable feedback, and refine my skills. It added a unique and valuable dimension to the learning process."',
-            avatar:
-              "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100",
-          },
-        ].map((rev, idx) => (
+        {ReviewData.map((rev, idx) => (
           <div
             key={idx}
             className="bg-gray-50/70 border border-gray-100 rounded-2xl p-5 space-y-3"

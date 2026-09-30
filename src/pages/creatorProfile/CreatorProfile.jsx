@@ -1,16 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import {
-  ShoppingBag,
   SlidersHorizontal,
   BarChart2,
   Grid,
   ChevronDown,
   Star,
   Signal,
-  BookOpen,
-  Clock,
-  MessageSquare,
 } from "lucide-react";
 import GridBG from "../shared/GridBG";
 import { CreatorCourses } from "../../utils/Datas";

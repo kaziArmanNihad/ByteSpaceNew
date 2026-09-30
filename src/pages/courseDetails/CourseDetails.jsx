@@ -1,15 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
-import {
-  Share2,
-  Star,
-  Users,
-  Signal,
-  FileText,
-  Video,
-  Award,
-  MessageSquare,
-} from "lucide-react";
+import { Share2, Star, Users, Signal } from "lucide-react";
 import GridBG from "../shared/GridBG";
 import courseDetailImage from "../../assets/HomePageImages/CourseDetailSectionImages/courseDetailImage.png";
 import courseDetailImageTwo from "../../assets/HomePageImages/CourseDetailSectionImages/courseDetailImageTwo.png";
@@ -17,6 +8,10 @@ import toast from "react-hot-toast";
 import AboutTab from "./AboutTab";
 import LessonTab from "./LessonTab";
 import ReviewTab from "./ReviewTab";
+import iconOne from "../../assets/HomePageImages/CourseDetailSectionImages/iconOne.png";
+import iconTwo from "../../assets/HomePageImages/CourseDetailSectionImages/iconTwo.png";
+import iconThree from "../../assets/HomePageImages/CourseDetailSectionImages/iconThree.png";
+import iconFour from "../../assets/HomePageImages/CourseDetailSectionImages/iconFour.png";
 
 function CourseDetails() {
   const [activeTab, setActiveTab] = useState("About");
@@ -38,7 +33,7 @@ function CourseDetails() {
               </p>
               <p className="mt-1 text-xs text-white/60">
                 by{" "}
-                <span className="text-white font-semibold underline">
+                <span className="font-semibold text-[#D2FF00]">
                   purepearl studio
                 </span>
               </p>
@@ -46,15 +41,15 @@ function CourseDetails() {
               {/* Stats Badges */}
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <div className="bg-white/90 backdrop-blur-md text-gray-900 px-4 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5">
-                  <Signal className="w-3.5 h-3.5 text-gray-600" />
+                  <Signal className="w-3.5 h-3.5 text-blue-600" />
                   <span>Intermediate</span>
                 </div>
                 <div className="bg-white/90 backdrop-blur-md text-gray-900 px-4 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5">
-                  <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                  <Star className="w-3.5 h-3.5 fill-blue-400 text-blue-400" />
                   <span>4.8 (172 reviews)</span>
                 </div>
                 <div className="bg-white/90 backdrop-blur-md text-gray-900 px-4 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5">
-                  <Users className="w-3.5 h-3.5 text-gray-600" />
+                  <Users className="w-3.5 h-3.5 text-blue-600" />
                   <span>199 Students</span>
                 </div>
               </div>
@@ -168,19 +163,35 @@ function CourseDetails() {
                 </p>
                 <div className="space-y-2 text-xs text-gray-600">
                   <div className="flex items-center gap-2.5">
-                    <FileText className="w-4 h-4 text-[#1052FE]" />
+                    <img
+                      src={iconOne}
+                      alt="icon one"
+                      className="w-4 h-4 text-[#1052FE]"
+                    />
                     <span>Learning Resources</span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <Video className="w-4 h-4 text-[#1052FE]" />
+                    <img
+                      src={iconTwo}
+                      alt="icon two"
+                      className="w-4 h-4 text-[#1052FE]"
+                    />
                     <span>Quality Lesson Videos</span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <Award className="w-4 h-4 text-[#1052FE]" />
+                    <img
+                      src={iconThree}
+                      alt="icon three"
+                      className="w-4 h-4 text-[#1052FE]"
+                    />
                     <span>Certificate of Completion</span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <MessageSquare className="w-4 h-4 text-[#1052FE]" />
+                    <img
+                      src={iconFour}
+                      alt="icon four"
+                      className="w-4 h-4 text-[#1052FE]"
+                    />
                     <span>Private Consultation</span>
                   </div>
                 </div>
