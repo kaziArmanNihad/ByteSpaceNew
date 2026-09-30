@@ -9,8 +9,7 @@ export default function Footer() {
   const handleSubmit = (e) => {
     e.preventDefault();
     toast.success("Subscribed successfully!");
-    setEmail(""); // Clear the input field after submission
-    // Handle newsletter subscription
+    setEmail("");
     console.log("Subscribed:", email);
   };
 
@@ -39,7 +38,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-white font-sans text-[#2D2D2D] py-16 px-6 md:px-16 lg:px-24">
+    <footer className="w-full bg-white font-sans text-[#2D2D2D] py-16 px-6 md:px-16 lg:px-24 border-t border-gray-300">
       <div className="mx-auto max-w-7xl">
         {/* Logo */}
         <div className="flex items-center gap-2 mb-2">

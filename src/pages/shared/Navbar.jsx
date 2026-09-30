@@ -29,7 +29,7 @@ function Navbar() {
             Courses
           </Link>
           <Link
-            to="/creators"
+            to="/creatorProfile"
             className="hover:text-white/50 transition-colors"
           >
             Creators

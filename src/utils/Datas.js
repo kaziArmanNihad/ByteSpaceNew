@@ -500,6 +500,99 @@ const ALL_COURSES = [
   },
 ];
 
+const CreatorCourses = [
+  {
+    id: 1,
+    title: "Learn Figma from Basic",
+    author: "purepearl studio",
+    rating: 4.5,
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    level: "Beginner",
+    price: "$25",
+    priceType: "/lifetime",
+    image:
+      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80",
+    studentsCount: "26+",
+  },
+  {
+    id: 2,
+    title: "Build Digital Asset",
+    author: "purepearl studio",
+    rating: 4.5,
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    level: "Beginner",
+    price: "$25",
+    priceType: "/lifetime",
+    image:
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    studentsCount: "26+",
+  },
+  {
+    id: 3,
+    title: "the Power of Big Data",
+    author: "purepearl studio",
+    rating: 4.5,
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    level: "Beginner",
+    price: "$25",
+    priceType: "/lifetime",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    studentsCount: "26+",
+  },
+  {
+    id: 4,
+    title: "Balancing Productivity an...",
+    author: "purepearl studio",
+    rating: 4.5,
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    level: "Beginner",
+    price: "$25",
+    priceType: "/lifetime",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    studentsCount: "26+",
+  },
+  {
+    id: 5,
+    title: "Mastering Money Manage...",
+    author: "purepearl studio",
+    rating: 4.5,
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    level: "Beginner",
+    price: "$25",
+    priceType: "/lifetime",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
+    studentsCount: "26+",
+  },
+  {
+    id: 6,
+    title: "From Idea to Startup Succ...",
+    author: "purepearl studio",
+    rating: 4.5,
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    level: "Beginner",
+    price: "$25",
+    priceType: "/lifetime",
+    image:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    studentsCount: "26+",
+  },
+];
+
 const position = "top-right";
 const toastOptions = {
   duration: 3000,
@@ -531,6 +624,7 @@ export {
   ALL_COURSES,
   FeatureCourseData,
   FeatureCategories,
+  CreatorCourses,
   position,
   toastOptions,
 };
