@@ -6,7 +6,6 @@ import GrowthAndManagement from "../../components/homePageComponents/GrowthAndMa
 import Banner from "../../components/homePageComponents/Banner.jsx";
 import Testimonials from "../../components/homePageComponents/Testimonials.jsx";
 
-
 function Home() {
   return (
     <>

@@ -16,7 +16,7 @@ import ReviewTab from "../../components/courseDetailPageComponents/ReviewTab";
 
 function CourseDetails() {
   const [activeTab, setActiveTab] = useState("About");
-  
+
   return (
     <div className="w-full bg-white font-sans text-gray-900 pb-20 select-none">
       {/* HERO SECTION WITH NAVBAR */}

@@ -153,17 +153,17 @@ Browser Client (React SPA)
 
 ## 🛠️ Tech Stack & Dependencies
 
-| Area               | Technology                                                                                                    |
-| :----------------- | :------------------------------------------------------------------------------------------------------------ |
-| **Framework**      | [React](https://react.dev/) (Vite)                                                                            |
-| **Styling**        | [Tailwind CSS](https://tailwindcss.com/)                                                                      |
-| **Authentication** | [Firebase Authentication](https://firebase.google.com/docs/auth) (email and password)                         |
-| **State**          | React Context API (`AuthContext`)                                                                             |
-| **Forms**          | [React Hook Form](https://react-hook-form.com/)                                                               |
-| **Icons**          | [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)               |
-| **Notifications**  | [React Hot Toast](https://react-hot-toast.com/)                                                               |
-| **Routing**        | `react-router`                                                                                                |
-| **Hosting**        | [Vercel](https://vercel.com/)                                                                                 |
+| Area               | Technology                                                                                      |
+| :----------------- | :---------------------------------------------------------------------------------------------- |
+| **Framework**      | [React](https://react.dev/) (Vite)                                                              |
+| **Styling**        | [Tailwind CSS](https://tailwindcss.com/)                                                        |
+| **Authentication** | [Firebase Authentication](https://firebase.google.com/docs/auth) (email and password)           |
+| **State**          | React Context API (`AuthContext`)                                                               |
+| **Forms**          | [React Hook Form](https://react-hook-form.com/)                                                 |
+| **Icons**          | [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/) |
+| **Notifications**  | [React Hot Toast](https://react-hot-toast.com/)                                                 |
+| **Routing**        | `react-router`                                                                                  |
+| **Hosting**        | [Vercel](https://vercel.com/)                                                                   |
 
 ---
 

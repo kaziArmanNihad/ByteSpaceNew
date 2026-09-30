@@ -7,7 +7,6 @@ import TestimonialImageOne from "../assets/HomePageImages/TestimonialSectionImag
 import TestimonialImageTwo from "../assets/HomePageImages/TestimonialSectionImages/TestimonialImageTwo.png";
 import TestimonialImageThree from "../assets/HomePageImages/TestimonialSectionImages/TestimonialImageThree.png";
 
-
 const FeatureCourseData = [
   {
     id: 1,
@@ -697,6 +696,7 @@ export {
   FeatureCourseData,
   FeatureCategories,
   CreatorCourses,
+  TestimonialsData,
   ReviewData,
   position,
   toastOptions,
